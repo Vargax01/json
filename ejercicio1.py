@@ -12,7 +12,7 @@ print "Hidrocarburos no metano"
 listadat=[]
 pasa=False
 while pasa == False:
-    dato=str(raw_input("Dame un dato pulse o pulse q para quitar"))
+    dato=str(raw_input("Dame un dato pulse o pulse q para quitar: "))
     if dato == "q":
         pasa=True
     else:
@@ -23,6 +23,8 @@ cad_uni='Monóxido de nitrógeno'
 with open('contaminacion.json') as data_file:
     data = json.load(data_file)
 for elem in data:
-    print elem[cad_uni.decode('utf-8')]
-
-print listadat
+    print elem["Fecha"]
+    for elem1 in elem:
+        if elem1 in listadat:
+            print elem1, ":", elem[elem1]
+    print "###################################################"
