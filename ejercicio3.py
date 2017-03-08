@@ -19,4 +19,4 @@ print "Las fechas en la que", dato, "esta entre", numin, "y", numax
 for elem in data:
     for elem1 in elem:
         if elem1 == dato and elem[elem1] > numin and elem[elem1] < numax:
-            print elem["Fecha"]
+            print elem["Fecha"], "con", elem1, ":", elem[elem1]
