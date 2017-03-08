@@ -12,9 +12,11 @@ print "Xileno"
 print "Hidrocarburos totales"
 print "Hidrocarburos no metano"
 dato=str(raw_input("Dame un dato: "))
-numero1=int(raw_input("Dame un número: "))
-numero2=int(raw_input("Dame otro número: "))
+numin=int(raw_input("Dame un número(mínimo): "))
+numax=int(raw_input("Dame otro número(máximo): "))
 dato=dato.decode('utf-8')
+print "Las fechas en la que", dato, "esta entre", numin, "y", numax
 for elem in data:
     for elem1 in elem:
-        if elem1 == dato and elem[elem1]
+        if elem1 == dato and elem[elem1] > numin and elem[elem1] < numax:
+            print elem["Fecha"]
