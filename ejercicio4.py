@@ -14,5 +14,15 @@ print "Hidrocarburos no metano"
 dato=str(raw_input("Dame un dato: "))
 fecha=str(raw_input("Dame un año para hacer la media de ese dato(2000-2017): "))
 dato=dato.decode('utf-8')
+cont=0
+suma=0
 for elem in data:
-    print elem["Fecha"].split("-")[0]
+    if elem["Fecha"].split("-")[0] == fecha:
+        for elem1 in elem:
+            if elem1 == dato and elem[elem1] != None:
+                suma=suma+elem[elem1]
+            elif elem1 == dato and elem[elem1] == None:
+                suma=suma+0
+        cont=cont+1
+resultado=suma/float(cont)
+print "La media del dato", dato, "en el año", fecha, "es", resultado
